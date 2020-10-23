@@ -1,2 +1,1 @@
-# SufeeStore
-Try to code a project with AspNetCore version 3.1
+Try to code a project with AspNetCore 3.14
