@@ -1,0 +1,23 @@
+[33mcommit aa1c32e417bceffad12ab9eaa4a07fd2de9539cf[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Hqtruong27 <hqtruong27@gmail.com>
+Date:   Fri Oct 23 11:21:53 2020 +0700
+
+    add README
+
+[33mcommit 34b385c20fb0b18195016f0a0209105f28356e7e[m
+Author: Hoang Truong <hqtruong27@gmail.com>
+Date:   Fri Oct 23 11:14:57 2020 +0700
+
+    Create README.md
+
+[33mcommit fa2311828d46258f2abc586125b2602fe6721331[m
+Author: Hqtruong27 <hqtruong27@gmail.com>
+Date:   Fri Oct 23 11:04:09 2020 +0700
+
+    Add project files.
+
+[33mcommit 403991477f50e773983e01953e1e07bcfe3ce8d6[m
+Author: Hqtruong27 <hqtruong27@gmail.com>
+Date:   Fri Oct 23 11:04:02 2020 +0700
+
+    Add .gitignore and .gitattributes.
