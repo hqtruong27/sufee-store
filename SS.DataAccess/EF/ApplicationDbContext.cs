@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using SS.DataAccess.Configurations;
 using SS.DataAccess.Entities;
+using SS.DataAccess.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -68,6 +69,8 @@ namespace SS.DataAccess.EF
                 entity.HasKey(key => new { key.UserId, key.LoginProvider, key.Name });
 
             });
+            //seed data
+            modelBuilder.Seed();
         }
 
         public DbSet<AppConfig> AppConfigs { get; set; }

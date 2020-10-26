@@ -25,6 +25,8 @@
     <Compile Remove="Migrations\20201026143658_AspNetCoreIdentity.Designer.cs" />
     <Compile Remove="Migrations\20201026144226_AspNetCoreIdentity.cs" />
     <Compile Remove="Migrations\20201026144226_AspNetCoreIdentity.Designer.cs" />
+    <Compile Remove="Migrations\20201026152933_seed-UserDataSample.cs" />
+    <Compile Remove="Migrations\20201026152933_seed-UserDataSample.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
