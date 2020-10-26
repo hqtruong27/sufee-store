@@ -1,4 +1,4 @@
-<h1 style="color:#ff0000;font-weight: 700">Try to code a project with AspNetCore version 3.14</h1>
+<h1 style="font-weight: 700; color: red;">Try to code a project with AspNetCore version 3.14</h1>
 
 ## Install package
 EntityFramework Tools, Design, SqlServer
