@@ -7,6 +7,25 @@ namespace SS.DataAccess.Enums
     public enum Status
     {
         InActive,
-        Acticve
+        Acticve,
+        
+    }
+    public enum NewsStatus
+    {
+        Approved,
+        Pedding
+    }
+    public enum OrderStatus
+    {
+        InProgress,
+        Confirmed,
+        Shipping,
+        Success,
+        Canceled
+    }
+    public enum TransactionStatus
+    {
+        Success,
+        Failed
     }
 }

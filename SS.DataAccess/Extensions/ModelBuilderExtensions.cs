@@ -36,17 +36,29 @@ namespace SS.DataAccess.Extensions
                 new CategoryTranslation { Id = 1, CategoryId = 1, Name = "Iphone", LanguageId = "vi-VN", SeoAlias = "iphone", SeoDescription = "Danh mục Iphone", SeoTitle = "Danh mục Iphone" },
                 new CategoryTranslation { Id = 2, CategoryId = 1, Name = "Iphone", LanguageId = "en-US", SeoAlias = "iphone", SeoDescription = "Category Iphone", SeoTitle = "Category Iphone" }
                 );
+<<<<<<< HEAD
+=======
+            //Product
+>>>>>>> develop
             modelBuilder.Entity<Product>().HasData(
                new Product
                {
                    Id = 1,
+<<<<<<< HEAD
                    DeatCreated = DateTime.Now,
+=======
+                   DateCreated = DateTime.Now,
+>>>>>>> develop
                    PriceIn = 10000,
                    Price = 12000,
                    Stock = 0,
                    ViewCount = 0,
                    CategoryId = 1,
                });
+<<<<<<< HEAD
+=======
+            //Product translation
+>>>>>>> develop
             modelBuilder.Entity<ProductTranslation>().HasData(
                new ProductTranslation
                {

@@ -17,7 +17,7 @@ namespace SS.DataAccess.Configurations
             builder.Property(x => x.PriceIn).IsRequired();
             builder.Property(x => x.Stock).IsRequired().HasDefaultValue(0);
             builder.Property(x => x.ViewCount).IsRequired().HasDefaultValue(0);
-            builder.Property(x => x.DeatCreated).IsRequired().HasDefaultValue(DateTime.Now);
+            builder.Property(x => x.DateCreated).IsRequired().HasDefaultValue(DateTime.Now);
 
             builder.HasOne(x => x.Category).WithMany(x => x.Products).HasForeignKey(x => x.CategoryId);
         }
