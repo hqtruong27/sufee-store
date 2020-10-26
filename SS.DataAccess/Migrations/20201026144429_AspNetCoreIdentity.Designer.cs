@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SS.DataAccess.EF;
 
 namespace SS.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201026144429_AspNetCoreIdentity")]
+    partial class AspNetCoreIdentity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -162,13 +164,6 @@ namespace SS.DataAccess.Migrations
                     b.HasKey("Key");
 
                     b.ToTable("AppConfigs");
-
-                    b.HasData(
-                        new
-                        {
-                            Key = "Home Title",
-                            Value = "This is home Page Sufee"
-                        });
                 });
 
             modelBuilder.Entity("SS.DataAccess.Entities.AppUser", b =>
@@ -304,15 +299,6 @@ namespace SS.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            IsShowOnHome = true,
-                            SortOrder = 1,
-                            Status = 1
-                        });
                 });
 
             modelBuilder.Entity("SS.DataAccess.Entities.CategoryTranslation", b =>
@@ -358,28 +344,6 @@ namespace SS.DataAccess.Migrations
                     b.HasIndex("LanguageId");
 
                     b.ToTable("CategoryTranslations");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CategoryId = 1,
-                            LanguageId = "vi-VN",
-                            Name = "Iphone",
-                            SeoAlias = "iphone",
-                            SeoDescription = "Danh mục Iphone",
-                            SeoTitle = "Danh mục Iphone"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CategoryId = 1,
-                            LanguageId = "en-US",
-                            Name = "Iphone",
-                            SeoAlias = "iphone",
-                            SeoDescription = "Category Iphone",
-                            SeoTitle = "Category Iphone"
-                        });
                 });
 
             modelBuilder.Entity("SS.DataAccess.Entities.Contact", b =>
@@ -437,20 +401,6 @@ namespace SS.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Languages");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "vi-VN",
-                            IsDefault = true,
-                            Name = "Vietnamese"
-                        },
-                        new
-                        {
-                            Id = "en-US",
-                            IsDefault = false,
-                            Name = "English"
-                        });
                 });
 
             modelBuilder.Entity("SS.DataAccess.Entities.News", b =>
@@ -589,15 +539,7 @@ namespace SS.DataAccess.Migrations
                     b.Property<DateTime>("OrderDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        .HasDefaultValue(new DateTime(2020, 10, 26, 11, 52, 52, 45, DateTimeKind.Local).AddTicks(3753));
-=======
-                        .HasDefaultValue(new DateTime(2020, 10, 26, 16, 26, 20, 53, DateTimeKind.Local).AddTicks(3022));
->>>>>>> develop
-=======
                         .HasDefaultValue(new DateTime(2020, 10, 26, 21, 44, 28, 859, DateTimeKind.Local).AddTicks(4507));
->>>>>>> develop
 
                     b.Property<string>("ShipAddress")
                         .IsRequired()
@@ -667,15 +609,7 @@ namespace SS.DataAccess.Migrations
                     b.Property<DateTime>("DateCreated")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        .HasDefaultValue(new DateTime(2020, 10, 26, 11, 52, 52, 56, DateTimeKind.Local).AddTicks(5326));
-=======
-                        .HasDefaultValue(new DateTime(2020, 10, 26, 16, 26, 20, 62, DateTimeKind.Local).AddTicks(79));
->>>>>>> develop
-=======
                         .HasDefaultValue(new DateTime(2020, 10, 26, 21, 44, 28, 864, DateTimeKind.Local).AddTicks(2743));
->>>>>>> develop
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
@@ -698,18 +632,6 @@ namespace SS.DataAccess.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Products");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CategoryId = 1,
-                            DeatCreated = new DateTime(2020, 10, 26, 11, 52, 52, 63, DateTimeKind.Local).AddTicks(4216),
-                            Price = 12000m,
-                            PriceIn = 10000m,
-                            Stock = 0,
-                            ViewCount = 0
-                        });
                 });
 
             modelBuilder.Entity("SS.DataAccess.Entities.ProductTranslation", b =>
@@ -761,32 +683,6 @@ namespace SS.DataAccess.Migrations
                     b.HasIndex("ProductId");
 
                     b.ToTable("ProductTranslations");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Description = "VN",
-                            Details = "Mô tả về ip 7",
-                            LanguageId = "vi-VN",
-                            Name = "Iphone 7",
-                            ProductId = 1,
-                            SeoAlias = "iphone-7",
-                            SeoDescription = "Đây là Iphone 7",
-                            SeoTitle = "sản phẩm Iphone 7"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Description = "EN",
-                            Details = "Description Ip 7",
-                            LanguageId = "en-US",
-                            Name = "Iphone 7",
-                            ProductId = 1,
-                            SeoAlias = "iphone-7",
-                            SeoDescription = "This is Iphone 7",
-                            SeoTitle = "This is Iphone 7"
-                        });
                 });
 
             modelBuilder.Entity("SS.DataAccess.Entities.Promotion", b =>

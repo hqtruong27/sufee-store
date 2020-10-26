@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using SS.DataAccess.Entities;
 using System;
 using System.Collections.Generic;
@@ -74,6 +75,37 @@ namespace SS.DataAccess.Extensions
                },
                new ProductTranslation { Id = 2, ProductId = 1, Name = "Iphone 7", LanguageId = "en-US", SeoAlias = "iphone-7", SeoDescription = "This is Iphone 7", SeoTitle = "This is Iphone 7", Details = "Description Ip 7", Description = "EN" }
                );
+
+            //User Sample
+            const string roleId = "0B39A049-7277-4F28-9DDF-148907D7F987";
+            const string adminId ="3973E3F1-086C-4AFF-B484-431013385161";
+            modelBuilder.Entity<IdentityRole>().HasData(new IdentityRole
+            {
+                Id = roleId,
+                Name = "Admin",
+                NormalizedName = "Admin",
+            });
+
+            var hasher = new PasswordHasher<AppUser>();
+            modelBuilder.Entity<AppUser>().HasData(new AppUser
+            {
+                Id = adminId,
+                UserName = "Hqtruong27",
+                NormalizedUserName = "Hqtruong27",
+                Email = "hqtruong27@gmail.com",
+                NormalizedEmail = "hqtruong27@gmail.com",
+                EmailConfirmed = true,
+                PasswordHash = hasher.HashPassword(null, "mepbphhond"),
+                SecurityStamp = string.Empty,
+                FullName = "Hoang Truong",
+                Birthday = new DateTime(1998, 07, 22)
+            });
+
+            modelBuilder.Entity<IdentityUserRole<string>>().HasData(new IdentityUserRole<string>
+            {
+                RoleId = roleId,
+                UserId = adminId
+            });
         }
     }
 }
