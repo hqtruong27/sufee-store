@@ -12,6 +12,7 @@ namespace SS.DataAccess.Entities
         public string SeoTitle { get; set; }
         public string SeoAlias { get; set; }
         public int NewsCatalogId { get; set; }
+        public string LanguageId { get; set; }
 
         public NewsCatalog NewsCatalog { get; set; }
         public Language Language { get; set; }

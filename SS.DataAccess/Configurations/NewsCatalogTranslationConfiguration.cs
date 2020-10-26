@@ -20,7 +20,7 @@ namespace SS.DataAccess.Configurations
             builder.Property(x => x.SeoDescription).HasMaxLength(500).IsRequired(false);
 
             builder.HasOne(x => x.NewsCatalog).WithMany(x => x.NewsCatalogTranslations).HasForeignKey(x => x.NewsCatalogId);
-            builder.HasOne(x => x.Language).WithMany(x => x.NewsCatalogTranslations).HasForeignKey(x => x.Language);
+            builder.HasOne(x => x.Language).WithMany(x => x.NewsCatalogTranslations).HasForeignKey(x => x.LanguageId);
         }
     }
 }
