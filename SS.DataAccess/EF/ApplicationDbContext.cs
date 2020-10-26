@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SS.DataAccess.Configurations;
 using SS.DataAccess.Entities;
+using SS.DataAccess.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -27,6 +28,9 @@ namespace SS.DataAccess.EF
             modelBuilder.ApplyConfiguration(new PromotionConfiguration());
             modelBuilder.ApplyConfiguration(new TransactionConfiguration());
             //base.OnModelCreating(modelBuilder);
+
+            //Seed Data
+            modelBuilder.Seed();
         }
 
         public DbSet<AppConfig> AppConfigs { get; set; }
