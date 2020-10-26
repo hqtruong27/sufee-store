@@ -3,24 +3,25 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SS.DataAccess.Migrations
 {
-    public partial class addfournewtable : Migration
+    public partial class initialver2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AlterColumn<DateTime>(
+            migrationBuilder.DropColumn(
                 name: "DeatCreated",
+                table: "Products");
+
+            migrationBuilder.AddColumn<DateTime>(
+                name: "DateCreated",
                 table: "Products",
                 nullable: false,
-                defaultValue: new DateTime(2020, 10, 26, 14, 57, 42, 825, DateTimeKind.Local).AddTicks(6391),
-                oldClrType: typeof(DateTime),
-                oldType: "datetime2",
-                oldDefaultValue: new DateTime(2020, 10, 26, 10, 57, 27, 847, DateTimeKind.Local).AddTicks(5788));
+                defaultValue: new DateTime(2020, 10, 26, 16, 26, 20, 62, DateTimeKind.Local).AddTicks(79));
 
             migrationBuilder.AlterColumn<DateTime>(
                 name: "OrderDate",
                 table: "Orders",
                 nullable: false,
-                defaultValue: new DateTime(2020, 10, 26, 14, 57, 42, 817, DateTimeKind.Local).AddTicks(3648),
+                defaultValue: new DateTime(2020, 10, 26, 16, 26, 20, 53, DateTimeKind.Local).AddTicks(3022),
                 oldClrType: typeof(DateTime),
                 oldType: "datetime2",
                 oldDefaultValue: new DateTime(2020, 10, 26, 10, 57, 27, 839, DateTimeKind.Local).AddTicks(1219));
@@ -44,8 +45,8 @@ namespace SS.DataAccess.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Status = table.Column<int>(nullable: false, defaultValue: 3),
                     CountView = table.Column<int>(nullable: false, defaultValue: 0),
+                    Status = table.Column<int>(nullable: false, defaultValue: 1),
                     NewsCatalogId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
@@ -157,14 +158,16 @@ namespace SS.DataAccess.Migrations
             migrationBuilder.DropTable(
                 name: "NewsCatalogs");
 
-            migrationBuilder.AlterColumn<DateTime>(
+            migrationBuilder.DropColumn(
+                name: "DateCreated",
+                table: "Products");
+
+            migrationBuilder.AddColumn<DateTime>(
                 name: "DeatCreated",
                 table: "Products",
                 type: "datetime2",
                 nullable: false,
-                defaultValue: new DateTime(2020, 10, 26, 10, 57, 27, 847, DateTimeKind.Local).AddTicks(5788),
-                oldClrType: typeof(DateTime),
-                oldDefaultValue: new DateTime(2020, 10, 26, 14, 57, 42, 825, DateTimeKind.Local).AddTicks(6391));
+                defaultValue: new DateTime(2020, 10, 26, 10, 57, 27, 847, DateTimeKind.Local).AddTicks(5788));
 
             migrationBuilder.AlterColumn<DateTime>(
                 name: "OrderDate",
@@ -173,7 +176,7 @@ namespace SS.DataAccess.Migrations
                 nullable: false,
                 defaultValue: new DateTime(2020, 10, 26, 10, 57, 27, 839, DateTimeKind.Local).AddTicks(1219),
                 oldClrType: typeof(DateTime),
-                oldDefaultValue: new DateTime(2020, 10, 26, 14, 57, 42, 817, DateTimeKind.Local).AddTicks(3648));
+                oldDefaultValue: new DateTime(2020, 10, 26, 16, 26, 20, 53, DateTimeKind.Local).AddTicks(3022));
         }
     }
 }

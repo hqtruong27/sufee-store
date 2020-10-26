@@ -16,7 +16,7 @@ namespace SS.DataAccess.Configurations
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).UseIdentityColumn();
             builder.Property(x => x.CountView).HasDefaultValue(0);
-            builder.Property(x => x.Status).IsRequired().HasDefaultValue(Status.Pedding);
+            builder.Property(x => x.Status).IsRequired().HasDefaultValue(NewsStatus.Pedding);
         }
     }
 }

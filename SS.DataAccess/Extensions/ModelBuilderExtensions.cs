@@ -41,7 +41,7 @@ namespace SS.DataAccess.Extensions
                new Product
                {
                    Id = 1,
-                   DeatCreated = DateTime.Now,
+                   DateCreated = DateTime.Now,
                    PriceIn = 10000,
                    Price = 12000,
                    Stock = 0,

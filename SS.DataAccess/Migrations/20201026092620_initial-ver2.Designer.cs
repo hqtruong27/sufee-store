@@ -10,8 +10,8 @@ using SS.DataAccess.EF;
 namespace SS.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201026075743_add-four-new-table")]
-    partial class addfournewtable
+    [Migration("20201026092620_initial-ver2")]
+    partial class initialver2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -214,7 +214,7 @@ namespace SS.DataAccess.Migrations
                     b.Property<int>("Status")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasDefaultValue(3);
+                        .HasDefaultValue(1);
 
                     b.HasKey("Id");
 
@@ -327,7 +327,7 @@ namespace SS.DataAccess.Migrations
                     b.Property<DateTime>("OrderDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 10, 26, 14, 57, 42, 817, DateTimeKind.Local).AddTicks(3648));
+                        .HasDefaultValue(new DateTime(2020, 10, 26, 16, 26, 20, 53, DateTimeKind.Local).AddTicks(3022));
 
                     b.Property<string>("ShipAddress")
                         .IsRequired()
@@ -392,10 +392,10 @@ namespace SS.DataAccess.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("DeatCreated")
+                    b.Property<DateTime>("DateCreated")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 10, 26, 14, 57, 42, 825, DateTimeKind.Local).AddTicks(6391));
+                        .HasDefaultValue(new DateTime(2020, 10, 26, 16, 26, 20, 62, DateTimeKind.Local).AddTicks(79));
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
