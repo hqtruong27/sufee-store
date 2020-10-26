@@ -8,3 +8,5 @@ EntityFramework Tools, Design, SqlServer
 	+ Desgin database
 - Update 14:43
 	+ Add new 4 table news, newcatalog, newTranslation, NewsCatalogTranslation
+- Update 22:04
+	+ Add new 7 table identityServer: AppUsers, AppRoles, AppUserRoles, AppUserLogins, AppUserClaims, AppRolesClaims, AppUserTokens
