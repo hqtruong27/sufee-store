@@ -13,7 +13,8 @@ namespace SS.DataAccess.Entities
         public bool IsDefault { get; set; }
 
         public List<ProductTranslation> ProductTranslations { get; set; }
-
         public List<CategoryTranslation> CategoryTranslations { get; set; }
+        public List<NewsCatalogTranslation> NewsCatalogTranslations { get; set; }
+        public List<NewsTranslation> NewsTranslations { get; set; }
     }
 }

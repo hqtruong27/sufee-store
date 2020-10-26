@@ -5,6 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20201026091210_add-four-new-table.cs" />
+    <Compile Remove="Migrations\20201026091210_add-four-new-table.Designer.cs" />
+    <Compile Remove="Migrations\20201026092006_initial2.cs" />
+    <Compile Remove="Migrations\20201026092006_initial2.Designer.cs" />
+    <Compile Remove="Migrations\20201026092149_initial-ver2.cs" />
+    <Compile Remove="Migrations\20201026092149_initial-ver2.Designer.cs" />
+    <Compile Remove="Migrations\20201026092411_initial-ver2.cs" />
+    <Compile Remove="Migrations\20201026092411_initial-ver2.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.9">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

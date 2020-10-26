@@ -11,7 +11,7 @@ namespace SS.DataAccess.Entities
         public decimal PriceIn { get; set; }
         public int Stock { get; set; }
         public int ViewCount { get; set; }
-        public DateTime DeatCreated { get; set; }
+        public DateTime DateCreated { get; set; }
         public int CategoryId { get; set; }
         public List<OrderDetail> OrderDetails { get; set; }
 
