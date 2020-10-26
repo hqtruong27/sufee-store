@@ -49,7 +49,7 @@ namespace SS.DataAccess.Migrations
                         new
                         {
                             Id = "0B39A049-7277-4F28-9DDF-148907D7F987",
-                            ConcurrencyStamp = "8d0a3af2-97e4-446a-8779-da6f977f0251",
+                            ConcurrencyStamp = "e184cd95-6235-496f-9dbb-f7a8018fd53d",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         });
@@ -265,14 +265,14 @@ namespace SS.DataAccess.Migrations
                             Id = "3973E3F1-086C-4AFF-B484-431013385161",
                             AccessFailedCount = 0,
                             Birthday = new DateTime(1998, 7, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "14c4237e-42ca-4b9d-84de-2b801d1f7f53",
+                            ConcurrencyStamp = "19471fe7-df3b-402b-87a1-da4585b76839",
                             Email = "hqtruong27@gmail.com",
                             EmailConfirmed = true,
                             FullName = "Hoang Truong",
                             LockoutEnabled = false,
                             NormalizedEmail = "hqtruong27@gmail.com",
                             NormalizedUserName = "Hqtruong27",
-                            PasswordHash = "AQAAAAEAACcQAAAAEFAFFzQaHeJmGnSbBPu2E4a+LCSLvwHFm3xk/7HZQU8xE/mrhXBc9YquiuO5+VA9cA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEDv/6uP6b52f8PejhuiZJCrdweZk7Lsl6RnpcHzoXhDAElyEzBpwb6F0yHDezjzSaA==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -625,7 +625,7 @@ namespace SS.DataAccess.Migrations
                     b.Property<DateTime>("OrderDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 10, 26, 22, 32, 50, 852, DateTimeKind.Local).AddTicks(716));
+                        .HasDefaultValue(new DateTime(2020, 10, 26, 22, 46, 41, 269, DateTimeKind.Local).AddTicks(1351));
 
                     b.Property<string>("ShipAddress")
                         .IsRequired()
@@ -695,7 +695,7 @@ namespace SS.DataAccess.Migrations
                     b.Property<DateTime>("DateCreated")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 10, 26, 22, 32, 50, 856, DateTimeKind.Local).AddTicks(7904));
+                        .HasDefaultValue(new DateTime(2020, 10, 26, 22, 46, 41, 276, DateTimeKind.Local).AddTicks(5859));
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
@@ -724,7 +724,7 @@ namespace SS.DataAccess.Migrations
                         {
                             Id = 1,
                             CategoryId = 1,
-                            DateCreated = new DateTime(2020, 10, 26, 22, 32, 50, 866, DateTimeKind.Local).AddTicks(2150),
+                            DateCreated = new DateTime(2020, 10, 26, 22, 46, 41, 288, DateTimeKind.Local).AddTicks(1159),
                             Price = 12000m,
                             PriceIn = 10000m,
                             Stock = 0,
