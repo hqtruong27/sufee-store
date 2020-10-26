@@ -13,9 +13,22 @@
     <Compile Remove="Migrations\20201026092149_initial-ver2.Designer.cs" />
     <Compile Remove="Migrations\20201026092411_initial-ver2.cs" />
     <Compile Remove="Migrations\20201026092411_initial-ver2.Designer.cs" />
+    <Compile Remove="Migrations\20201026140206_AspNetCoreIdentity.cs" />
+    <Compile Remove="Migrations\20201026140206_AspNetCoreIdentity.Designer.cs" />
+    <Compile Remove="Migrations\20201026140828_AspNetCoreIdentity.cs" />
+    <Compile Remove="Migrations\20201026140828_AspNetCoreIdentity.Designer.cs" />
+    <Compile Remove="Migrations\20201026143323_AspNetCoreIdentity.cs" />
+    <Compile Remove="Migrations\20201026143323_AspNetCoreIdentity.Designer.cs" />
+    <Compile Remove="Migrations\20201026143433_AspNetCoreIdentity.cs" />
+    <Compile Remove="Migrations\20201026143433_AspNetCoreIdentity.Designer.cs" />
+    <Compile Remove="Migrations\20201026143658_AspNetCoreIdentity.cs" />
+    <Compile Remove="Migrations\20201026143658_AspNetCoreIdentity.Designer.cs" />
+    <Compile Remove="Migrations\20201026144226_AspNetCoreIdentity.cs" />
+    <Compile Remove="Migrations\20201026144226_AspNetCoreIdentity.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.9">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
