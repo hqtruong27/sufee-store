@@ -6,5 +6,5 @@ EntityFramework Tools, Design, SqlServer
 - 26/10
 	+ Configuration Fluent API 
 	+ Desgin database
-   *Update 14:43
+- Update 14:43
    Add new 4 table news, newcatalog, newTranslation, NewsCatalogTranslation
