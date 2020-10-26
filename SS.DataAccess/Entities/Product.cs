@@ -12,10 +12,13 @@ namespace SS.DataAccess.Entities
         public int Stock { get; set; }
         public int ViewCount { get; set; }
         public DateTime DeatCreated { get; set; }
+        public int CategoryId { get; set; }
         public List<OrderDetail> OrderDetails { get; set; }
 
         public List<Cart> Carts { get; set; }
 
         public List<ProductTranslation> ProductTranslations { get; set; }
+
+        public Category Category { get; set; }
     }
 }

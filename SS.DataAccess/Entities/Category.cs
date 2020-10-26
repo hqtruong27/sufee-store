@@ -14,5 +14,7 @@ namespace SS.DataAccess.Entities
         public Status Status { get; set; }
 
         public List<CategoryTranslation> CategoryTranslations { get; set; }
-    }
+
+        public List<Product> Products { get; set; }
+}
 }
