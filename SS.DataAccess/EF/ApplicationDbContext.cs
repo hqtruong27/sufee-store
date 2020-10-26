@@ -14,12 +14,17 @@ namespace SS.DataAccess.EF
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //
             modelBuilder.ApplyConfiguration(new AppConfigConfiguration());
             modelBuilder.ApplyConfiguration(new CartConfiguration());
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
             modelBuilder.ApplyConfiguration(new CategoryTranslationConfiguration());
             modelBuilder.ApplyConfiguration(new ContactConfiguration());
             modelBuilder.ApplyConfiguration(new LanguageConfiguration());
+            modelBuilder.ApplyConfiguration(new NewsConfiguration());
+            modelBuilder.ApplyConfiguration(new NewsCatalogConfiguration());
+            modelBuilder.ApplyConfiguration(new NewsCatalogTranslationConfiguration());
+            modelBuilder.ApplyConfiguration(new NewsTranslationConfiguration());
             modelBuilder.ApplyConfiguration(new OrderConfiguration());
             modelBuilder.ApplyConfiguration(new OrderDetailConfiguration());
             modelBuilder.ApplyConfiguration(new ProductConfiguration());

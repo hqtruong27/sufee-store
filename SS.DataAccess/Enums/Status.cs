@@ -7,6 +7,8 @@ namespace SS.DataAccess.Enums
     public enum Status
     {
         InActive,
-        Acticve
+        Acticve,
+        Approved,
+        Pedding
     }
 }
