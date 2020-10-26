@@ -8,3 +8,4 @@ EntityFramework Tools, Design, SqlServer
 	+ Desgin database
 - Update 14:43
 	+ Add new 4 table news, newcatalog, newTranslation, NewsCatalogTranslation
+	bcx
