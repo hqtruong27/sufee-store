@@ -68,4 +68,6 @@
 *.css linguist-detectable=false
 *.scss linguist-detectable=false
 *.less linguist-detectable=false
+*.ASP.NET linguist-detectable=true
+*.xASP.NET linguist-detectable=true
 *.xphp linguist-detectable=false
