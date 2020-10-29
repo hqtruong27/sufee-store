@@ -19,4 +19,5 @@
 - <b>Update 29/10</b> 
 	+ New Application WebAPI
 	+ Create Web Swagger
-	+ --EntityFramework Tools, Design, SqlServer
+	+ 'EntityFramework Tools, Design, SqlServer'
+## Database Desgin --detail in branch
