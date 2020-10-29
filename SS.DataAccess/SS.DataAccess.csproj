@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20201026091210_add-four-new-table.cs" />
+    <Compile Remove="Migrations\20201026091210_add-four-new-table.Designer.cs" />
+    <Compile Remove="Migrations\20201026092006_initial2.cs" />
+    <Compile Remove="Migrations\20201026092006_initial2.Designer.cs" />
+    <Compile Remove="Migrations\20201026092149_initial-ver2.cs" />
+    <Compile Remove="Migrations\20201026092149_initial-ver2.Designer.cs" />
+    <Compile Remove="Migrations\20201026092411_initial-ver2.cs" />
+    <Compile Remove="Migrations\20201026092411_initial-ver2.Designer.cs" />
+    <Compile Remove="Migrations\20201026140206_AspNetCoreIdentity.cs" />
+    <Compile Remove="Migrations\20201026140206_AspNetCoreIdentity.Designer.cs" />
+    <Compile Remove="Migrations\20201026140828_AspNetCoreIdentity.cs" />
+    <Compile Remove="Migrations\20201026140828_AspNetCoreIdentity.Designer.cs" />
+    <Compile Remove="Migrations\20201026143323_AspNetCoreIdentity.cs" />
+    <Compile Remove="Migrations\20201026143323_AspNetCoreIdentity.Designer.cs" />
+    <Compile Remove="Migrations\20201026143433_AspNetCoreIdentity.cs" />
+    <Compile Remove="Migrations\20201026143433_AspNetCoreIdentity.Designer.cs" />
+    <Compile Remove="Migrations\20201026143658_AspNetCoreIdentity.cs" />
+    <Compile Remove="Migrations\20201026143658_AspNetCoreIdentity.Designer.cs" />
+    <Compile Remove="Migrations\20201026144226_AspNetCoreIdentity.cs" />
+    <Compile Remove="Migrations\20201026144226_AspNetCoreIdentity.Designer.cs" />
+    <Compile Remove="Migrations\20201026152933_seed-UserDataSample.cs" />
+    <Compile Remove="Migrations\20201026152933_seed-UserDataSample.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="3.1.9" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.9" />
+  </ItemGroup>
+
+</Project>
