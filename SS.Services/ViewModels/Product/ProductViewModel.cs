@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SS.Services.Interface.IProductServices.Dtos
+namespace SS.Services.ViewModels.Product
 {
     public class ProductViewModel
     {
@@ -34,6 +35,8 @@ namespace SS.Services.Interface.IProductServices.Dtos
 
         public string SeoAlias { get; set; }
         public string LanguageId { set; get; }
+
+        public IFormFile ThumbnailImage { get; set; }
     }
     public class ProductEditViewModel
     {

@@ -1,17 +1,18 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <!--<PackageReference Include="Microsoft.AspNetCore.App"/>-->
-    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="3.1.9" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\SS.DataAccess\SS.DataAccess.csproj" />
+    <ProjectReference Include="..\SS.Services\SS.Services.csproj" />
     <ProjectReference Include="..\SS.Utilities\SS.Utilities.csproj" />
   </ItemGroup>
+
 
 </Project>

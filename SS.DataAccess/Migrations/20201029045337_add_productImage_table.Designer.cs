@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SS.DataAccess.EF;
 
 namespace SS.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201029045337_add_productImage_table")]
+    partial class add_productImage_table
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -49,7 +51,7 @@ namespace SS.DataAccess.Migrations
                         new
                         {
                             Id = "0B39A049-7277-4F28-9DDF-148907D7F987",
-                            ConcurrencyStamp = "efd27fbe-3117-427d-9e78-8d7c30b3364c",
+                            ConcurrencyStamp = "c460fbdb-6c08-4c98-87e2-6f55aaf3427a",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         });
@@ -265,14 +267,14 @@ namespace SS.DataAccess.Migrations
                             Id = "3973E3F1-086C-4AFF-B484-431013385161",
                             AccessFailedCount = 0,
                             Birthday = new DateTime(1998, 7, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "47797aa3-5771-48b4-b678-8552559dd69e",
+                            ConcurrencyStamp = "acb8a005-fa02-49e9-bfcf-942a37b6364a",
                             Email = "hqtruong27@gmail.com",
                             EmailConfirmed = true,
                             FullName = "Hoang Truong",
                             LockoutEnabled = false,
                             NormalizedEmail = "hqtruong27@gmail.com",
                             NormalizedUserName = "Hqtruong27",
-                            PasswordHash = "AQAAAAEAACcQAAAAEJQmf6h0AE+ghgPA+rknztGpSrwAjqfmTYWCUohscJRtQKE7it6lSZSxJrkKI9TChg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEBlxG6tj2o2Drqk8T82G2QvMp2a8bxWuopWi8gTP7n9GQc0jtNpY8UgV2jNja/9FQw==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -625,7 +627,7 @@ namespace SS.DataAccess.Migrations
                     b.Property<DateTime>("OrderDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 10, 29, 12, 51, 46, 701, DateTimeKind.Local).AddTicks(8423));
+                        .HasDefaultValue(new DateTime(2020, 10, 29, 11, 53, 37, 144, DateTimeKind.Local).AddTicks(1420));
 
                     b.Property<string>("ShipAddress")
                         .IsRequired()
@@ -695,7 +697,7 @@ namespace SS.DataAccess.Migrations
                     b.Property<DateTime>("DateCreated")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 10, 29, 12, 51, 46, 706, DateTimeKind.Local).AddTicks(8549));
+                        .HasDefaultValue(new DateTime(2020, 10, 29, 11, 53, 37, 149, DateTimeKind.Local).AddTicks(4721));
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
@@ -724,7 +726,7 @@ namespace SS.DataAccess.Migrations
                         {
                             Id = 1,
                             CategoryId = 1,
-                            DateCreated = new DateTime(2020, 10, 29, 12, 51, 46, 719, DateTimeKind.Local).AddTicks(7132),
+                            DateCreated = new DateTime(2020, 10, 29, 11, 53, 37, 160, DateTimeKind.Local).AddTicks(7829),
                             Price = 12000m,
                             PriceIn = 10000m,
                             Stock = 0,

@@ -1,5 +1,5 @@
-﻿using SS.Services.Dtos;
-using SS.Services.Interface.IProductServices.Dtos;
+﻿using SS.Services.Common;
+using SS.Services.ViewModels.Product;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,5 +10,6 @@ namespace SS.Services.Interface.IProductServices
     public interface IClientProduct
     {
         Task<PagedRequest<ProductViewModel>> GettProuctByCategoryId(GetProductPagingRequest request);
+        Task<List<ProductViewModel>> GetProduct();
     }
 }
