@@ -1,13 +1,13 @@
 ﻿using SS.DataAccess.EF;
-using SS.Services.Dtos;
 using SS.Services.Interface.IProductServices;
-using SS.Services.Interface.IProductServices.Dtos;
 using System;
 using System.Linq;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using SS.Services.Common;
+using SS.Services.ViewModels.Product;
 
 namespace SS.Services.Services.ProductServices
 {
@@ -18,11 +18,39 @@ namespace SS.Services.Services.ProductServices
         {
             _context = context;
         }
+
+        public async Task<List<ProductViewModel>> GetProduct()
+        {
+            var strQuery =  (from p in _context.Products
+                                  join pt in _context.ProductTranslations
+                                  on p.Id equals pt.ProductId
+                                  join c in _context.Categories
+                                  on p.CategoryId equals c.Id
+                                  select new { p, pt });
+            
+            var data = await strQuery.Select(x => new ProductViewModel()
+            {
+                Id = x.p.Id,
+                Name = x.pt.Name,
+                DateCreated = x.p.DateCreated,
+                Description = x.pt.Description,
+                Details = x.pt.Details,
+                LanguageId = x.pt.LanguageId,
+                Price = x.p.Price,
+                SeoAlias = x.pt.SeoAlias,
+                SeoDescription = x.pt.SeoDescription,
+                PriceIn = x.p.PriceIn,
+                SeoTitle = x.pt.SeoTitle,
+                CategoryId = x.p.CategoryId
+            }).ToListAsync();
+            return data;
+        }
+
         public async Task<PagedRequest<ProductViewModel>> GettProuctByCategoryId(GetProductPagingRequest request)
         {
             var strQuery = from p in _context.Products
                            join pt in _context.ProductTranslations
-                           on p.Id equals pt.Id
+                           on p.Id equals pt.ProductId
                            join c in _context.Categories
                            on p.CategoryId equals c.Id
 

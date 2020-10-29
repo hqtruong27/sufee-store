@@ -1,5 +1,5 @@
-﻿using SS.Services.Dtos;
-using SS.Services.Interface.IProductServices.Dtos;
+﻿using SS.Services.Common;
+using SS.Services.ViewModels.Product;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,7 +11,7 @@ namespace SS.Services.Interface.IProductServices
     {
         Task<int> Create(ProductCreateViewModel model);
         Task<int> Edit(ProductEditViewModel model);
-        Task<bool> UpdatePrice(int productId, int newPrice);
+        Task<bool> UpdatePrice(int productId, decimal newPrice);
         Task<bool> UpdateStock(int productId, int addedQuantity);
         Task AddViewCount(int productId);
         Task<int> Delete(int productId);

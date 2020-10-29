@@ -1,15 +1,18 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SS.DataAccess.EF;
 using SS.DataAccess.Entities;
-using SS.Services.Dtos;
 using SS.Services.Interface.IProductServices;
-using SS.Services.Interface.IProductServices.Dtos;
 using SS.Utilities.Exceptions;
 using System;
 using System.Linq;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using SS.Services.Common;
+using SS.Services.ViewModels.Product;
+using Microsoft.AspNetCore.Http;
+using System.Net.Http.Headers;
+using System.IO;
 
 namespace SS.Services.Services.ProductServices
 {
@@ -47,7 +50,8 @@ namespace SS.Services.Services.ProductServices
                     },
                 }
             };
-            var result = await _context.Products.AddAsync(product);
+            //Save Image
+            await _context.Products.AddAsync(product);
             return await _context.SaveChangesAsync();
         }
 
@@ -120,7 +124,7 @@ namespace SS.Services.Services.ProductServices
             return pageResult;
         }
 
-        public async Task<bool> UpdatePrice(int productId, int newPrice)
+        public async Task<bool> UpdatePrice(int productId, decimal newPrice)
         {
             var product = await _context.Products.FindAsync(productId);
             if (product == null) throw new SufeeException($"Cannot find a Product with id: {productId}");
@@ -133,5 +137,14 @@ namespace SS.Services.Services.ProductServices
         {
             throw new NotImplementedException();
         }
+
+        //
+        //private async Task<string> SaveFile(IFormFile file)
+        //{
+        //    var originalFileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
+        //    var fileName = $"{Guid.NewGuid()}{Path.GetExtension(originalFileName)}";
+        //    await _storageService.SaveFileAsync(file.OpenReadStream(), fileName);
+        //    return fileName;
+        //}
     }
 }
