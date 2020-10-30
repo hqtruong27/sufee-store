@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ##Try to code a project with AspNetCore version 3.14
+=======
+<h1>Try to code a project with AspNetCore version 3.14</h1>
+>>>>>>> origin/develop
 
 ## Install package
 	+ EntityFramework Tools, Design, SqlServer
@@ -18,4 +22,9 @@
 	+ new layer Ultilities
 - <b>Update 29/10</b> 
 	+ New Application WebAPI
+<<<<<<< HEAD
 	+ Create Web Swagger
+=======
+	+ Create Web Swagger
+	+ EntityFramework Tools, Design, SqlServer
+>>>>>>> origin/develop
