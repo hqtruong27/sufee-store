@@ -7,10 +7,7 @@
   <ItemGroup>
     <!--<PackageReference Include="Microsoft.AspNetCore.App"/>-->
     <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="3.1.9" />
-<<<<<<< HEAD
-=======
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
->>>>>>> origin/develop
   </ItemGroup>
 
   <ItemGroup>
