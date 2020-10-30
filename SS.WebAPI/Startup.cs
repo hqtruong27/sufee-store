@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -13,8 +14,11 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using SS.DataAccess.EF;
+using SS.DataAccess.Entities;
 using SS.Services.Interface.IProductServices;
+using SS.Services.Interface.IUserServices;
 using SS.Services.Services.ProductServices;
+using SS.Services.Services.UserServices;
 using SS.Utilities.Constants;
 
 namespace SS.WebAPI
@@ -33,9 +37,15 @@ namespace SS.WebAPI
         {
             services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString(SystemConstants.NameConnectionString)));
-
+            services.AddIdentity<AppUser, IdentityRole>().
+                AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
             //DI
             services.AddTransient<IClientProduct, ClientProductServices>();
+            services.AddTransient<UserManager<AppUser>, UserManager<AppUser>>();
+            services.AddTransient<SignInManager<AppUser>, SignInManager<AppUser>>();
+            services.AddTransient<RoleManager<IdentityRole>, RoleManager<IdentityRole>>();
+            services.AddTransient<IUserServices, UserSevices>();
+
 
             services.AddControllers();
 
