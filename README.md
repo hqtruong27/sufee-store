@@ -1,4 +1,4 @@
-##Try to code a project with AspNetCore version 3.14
+<h1>Try to code a project with AspNetCore version 3.14</h1>
 
 ## Install package
 	+ EntityFramework Tools, Design, SqlServer
@@ -21,8 +21,5 @@
 	+ New Application WebAPI
 	+ Create Web Swagger
 	+ EntityFramework Tools, Design, SqlServer
-<<<<<<< HEAD
 - <b>Update 01/11</b>
 	+ New Application Core
-=======
->>>>>>> 98e95de45503327f3039ac80d3a24432975a7b73
