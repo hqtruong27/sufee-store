@@ -1,9 +1,11 @@
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SS.Core.DI;
+using SS.Services.ViewModels.User;
 using SS.WebAPI.Models;
 
 namespace SS.WebAPI
@@ -22,7 +24,7 @@ namespace SS.WebAPI
             //DI Inject
             services.RegisterDI(Configuration);
 
-            services.AddControllers();
+            services.AddControllers().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginViewModel>());
             //Swagger + Jwt Bearer
             services.ConfigureAuthentication(Configuration);
         }

@@ -19,11 +19,12 @@ namespace SS.WebAPI.Controllers
         {
             _userServices = userServices;
         }
-        [HttpPost("login")]
+
         [AllowAnonymous]
+        [HttpPost("login")]
         public async Task<IActionResult> Login([FromForm] LoginViewModel model)
         {
-            var resultToken = await _userServices.Authencation(model);
+            var resultToken = await _userServices.LoginAuthencation(model);
             return !string.IsNullOrEmpty(resultToken) ?
                 (IActionResult)Ok(new { token = resultToken }) :
                 BadRequest("UserName or Password is incorrect");

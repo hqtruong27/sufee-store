@@ -25,9 +25,9 @@ namespace SS.Services.Services.UserServices
             _signInManager = signInManager;
             _configuration = configuration;
         }
-        public async Task<string> Authencation(LoginViewModel model)
+        public async Task<string> LoginAuthencation(LoginViewModel model)
         {
-            var user = await _userManager.FindByEmailAsync(model.UserName);
+            var user = await _userManager.FindByNameAsync(model.UserName);
             if (user == null) return null;
             var result = await _signInManager.PasswordSignInAsync(user, model.Password, true, true);
             if (!result.Succeeded) return null;
