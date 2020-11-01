@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using SS.Services.ViewModels.User;
+using System;
 
 namespace SS.Services.FluentValidation.Users
 {
@@ -25,6 +26,8 @@ namespace SS.Services.FluentValidation.Users
                 .Matches("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$")
                 .WithMessage("Email is not the correct format");
 
+            RuleFor(x => x.Birthday)
+                .LessThan(DateTime.Now.AddYears(-18)).WithMessage("Must be 18 years old");
             RuleFor(x => x.Password).NotEmpty().WithMessage("Password is required")
                 .MinimumLength(6).WithMessage("Password must be at least 6 characters")
                 .MaximumLength(18).WithMessage("Password maximum of 18 characters");
