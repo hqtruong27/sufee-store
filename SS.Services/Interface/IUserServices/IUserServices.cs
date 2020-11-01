@@ -8,7 +8,7 @@ namespace SS.Services.Interface.IUserServices
 {
     public interface IUserServices
     {
-        Task<string> Authencation(LoginViewModel model);
+        Task<string> LoginAuthencation(LoginViewModel model);
         Task<bool> Register(RegisterViewModel model);
     }
 }
