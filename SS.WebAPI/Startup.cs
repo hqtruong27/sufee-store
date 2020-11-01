@@ -1,17 +1,9 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SS.DataAccess.EF;
-using SS.DataAccess.Entities;
-using SS.Services.Interface.IProductServices;
-using SS.Services.Interface.IUserServices;
-using SS.Services.Services.ProductServices;
-using SS.Services.Services.UserServices;
-using SS.Utilities.Constants;
+using SS.Core.DI;
 using SS.WebAPI.Models;
 
 namespace SS.WebAPI
@@ -27,20 +19,10 @@ namespace SS.WebAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString(SystemConstants.NameConnectionString)));
-            services.AddIdentity<AppUser, IdentityRole>().
-                AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
-
             //DI Inject
-            services.AddTransient<IClientProduct, ClientProductServices>();
-            services.AddTransient<UserManager<AppUser>, UserManager<AppUser>>();
-            services.AddTransient<SignInManager<AppUser>, SignInManager<AppUser>>();
-            services.AddTransient<RoleManager<IdentityRole>, RoleManager<IdentityRole>>();
-            services.AddTransient<IUserServices, UserSevices>();
+            services.RegisterDI(Configuration);
 
             services.AddControllers();
-
             //Swagger + Jwt Bearer
             services.ConfigureAuthentication(Configuration);
         }

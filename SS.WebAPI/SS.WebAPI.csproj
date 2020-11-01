@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SS.Core\SS.Core.csproj" />
     <ProjectReference Include="..\SS.DataAccess\SS.DataAccess.csproj" />
     <ProjectReference Include="..\SS.Services\SS.Services.csproj" />
     <ProjectReference Include="..\SS.Utilities\SS.Utilities.csproj" />
