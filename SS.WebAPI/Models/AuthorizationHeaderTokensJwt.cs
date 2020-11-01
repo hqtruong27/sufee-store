@@ -11,6 +11,7 @@ namespace SS.WebAPI.Models
     {
         public static void ConfigureAuthentication(this IServiceCollection services, IConfiguration configuration)
         {
+            //swagger
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Swagger Sufee Store", Version = "v1" });
