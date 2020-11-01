@@ -12,7 +12,8 @@
 - Update 22:04
 	+ Add new 7 table identityServer: AppUsers, AppRoles, AppUserRoles, AppUserLogins, AppUserClaims, AppRolesClaims, AppUserTokens
 - <b>29/10</b> Update
-	+ New ProductImage table
+	+ New ProductImage table<br/>
+
 ##Application layer --detail in branch <i>Application layer</i>
 - <b>28/10</b>
 	+ new layer Ultilities
@@ -20,3 +21,5 @@
 	+ New Application WebAPI
 	+ Create Web Swagger
 	+ EntityFramework Tools, Design, SqlServer
+- <b>Update 01/11</b>
+	+ New Application Core
