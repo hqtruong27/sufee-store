@@ -18,7 +18,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SS.WebAPI", "SS.WebAPI\SS.W
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SS.Core", "SS.Core\SS.Core.csproj", "{6BC0FC4B-956B-43F2-B7EA-D15EA61EA0A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SS.WebClient", "SS.WebClient\SS.WebClient.csproj", "{76575308-85BE-4F6E-B5CA-EE19E2D1A9F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SS.WebClient", "SS.WebClient\SS.WebClient.csproj", "{76575308-85BE-4F6E-B5CA-EE19E2D1A9F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SS.WebManager", "SS.WebManager\SS.WebManager.csproj", "{8C2EE4C2-1582-4866-A67F-2CCC7FE93F91}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +52,10 @@ Global
 		{76575308-85BE-4F6E-B5CA-EE19E2D1A9F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76575308-85BE-4F6E-B5CA-EE19E2D1A9F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76575308-85BE-4F6E-B5CA-EE19E2D1A9F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C2EE4C2-1582-4866-A67F-2CCC7FE93F91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C2EE4C2-1582-4866-A67F-2CCC7FE93F91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C2EE4C2-1582-4866-A67F-2CCC7FE93F91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C2EE4C2-1582-4866-A67F-2CCC7FE93F91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
