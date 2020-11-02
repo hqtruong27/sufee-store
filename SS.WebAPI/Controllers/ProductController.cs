@@ -16,7 +16,8 @@ namespace SS.WebAPI.Controllers
         }
         [HttpGet]
         [Authorize]
-        public async Task<IActionResult> GetProduct()
-            => Ok(await _product.GetProduct());
+        public async Task<IActionResult> GetProduct() => User.Identity.IsAuthenticated 
+            ? Ok(await _product.GetProduct()) : 
+            (IActionResult)BadRequest("Unauthorize");
     }
 }
