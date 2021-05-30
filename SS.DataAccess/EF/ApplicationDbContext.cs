@@ -33,6 +33,7 @@ namespace SS.DataAccess.EF
             modelBuilder.ApplyConfiguration(new OrderConfiguration());
             modelBuilder.ApplyConfiguration(new OrderDetailConfiguration());
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductImageConfiguration());
             modelBuilder.ApplyConfiguration(new ProductTranslationConfiguration());
             modelBuilder.ApplyConfiguration(new PromotionConfiguration());
             modelBuilder.ApplyConfiguration(new TransactionConfiguration());
@@ -89,6 +90,7 @@ namespace SS.DataAccess.EF
         public DbSet<Promotion> Promotions { get; set; }
 
         public DbSet<Product> Products { get; set; }
+        public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<ProductTranslation> ProductTranslations { get; set; }
 
         public DbSet<Category> Categories { get; set; }

@@ -1,0 +1,23 @@
+﻿using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using SS.Services.Interface.IProductServices;
+
+namespace SS.WebAPI.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class ProductController : ControllerBase
+    {
+        private readonly IClientProduct _product;
+        public ProductController(IClientProduct product)
+        {
+            _product = product;
+        }
+        [HttpGet]
+        [Authorize]
+        public async Task<IActionResult> GetProduct() => User.Identity.IsAuthenticated 
+            ? Ok(await _product.GetProduct()) : 
+            (IActionResult)BadRequest("Unauthorize");
+    }
+}
